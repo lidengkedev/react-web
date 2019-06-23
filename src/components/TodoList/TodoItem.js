@@ -17,7 +17,7 @@ class TodoItem extends Component {
       // <li onClick={this.handleDelete.bind(this)}>
       //   {this.props.content}
       // </li>
-      <li onClick={this.handleDelete}>
+      <li className="todo-item" onClick={this.handleDelete}>
         {content}
       </li>
     )

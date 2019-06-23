@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import TodoItem from './TodoItem'
+import './todolist.css'
 
 class TodoList extends Component {
 
@@ -30,10 +31,13 @@ class TodoList extends Component {
   }
 
   headleClick() {
-    this.setState({
-      list: [...this.state.list, this.state.inputValue],
-      inputValue: ''
-    })
+    const { inputValue } = this.state 
+    if (inputValue) {
+      this.setState({
+        list: [...this.state.list, inputValue],
+        inputValue: ''
+      })
+    }
   }
 
   headleDeleteItem(index) {
@@ -42,19 +46,35 @@ class TodoList extends Component {
     this.setState({ list })
   }
 
+  getTodoListItem() {
+    return (
+      this.state.list.map((item, index) => {
+        return (
+          <TodoItem
+            className="todo-item"
+            index={index}
+            content={item}
+            key={index}
+            handleDelete={this.headleDeleteItem}
+          />
+        )
+      })
+    )
+  }
+
   render() {
     return (
-      <div>
+      <Fragment>
         <div>
-        {/* <input value={this.state.inputValue} onChange={this.headleInputChange.bind(this)} /> */}
-        <input value={this.state.inputValue} onChange={this.headleInputChange} />
-        {/* 此处的this指向TodoList */}
-        {/* <button onClick={this.headleClick1}>add</button> */}
-        {/* 把当前的this绑定到button上 */}
-        {/* <button onClick={this.headleClick.bind(this)}>add</button> */}
-        <button onClick={this.headleClick}>add</button>
+          {/* <input value={this.state.inputValue} onChange={this.headleInputChange.bind(this)} /> */}
+          <input className="todo-input" value={this.state.inputValue} onChange={this.headleInputChange} />
+          {/* 此处的this指向TodoList */}
+          {/* <button onClick={this.headleClick1}>add</button> */}
+          {/* 把当前的this绑定到button上 */}
+          {/* <button onClick={this.headleClick.bind(this)}>add</button> */}
+          <button className="todo-button" onClick={this.headleClick}>添加</button>
         </div>
-        <ul>
+        {/* <ul>
           {this.state.list.map((item, index) => {
             // return <li key={index} onClick={this.headleDeleteItem.bind(this)}>{item}</li>
             // 父组件向子组件通过属性的形式向子组件传递参数
@@ -62,8 +82,9 @@ class TodoList extends Component {
             // return <TodoItem index={index} content={item} key={index} handleDelete={this.headleDeleteItem.bind(this)} />
             return <TodoItem index={index} content={item} key={index} handleDelete={this.headleDeleteItem} />
           })}
-        </ul>
-      </div>
+        </ul> */}
+        <ul className="todo-list">{this.getTodoListItem()}</ul>
+      </Fragment>
     )
   }
 }
