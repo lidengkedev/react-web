@@ -1,17 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-import App from './App'
-import Game from './view/Game'
-import TodoList from './view/TodoList'
+import Router from './router/index'
 
 // ========================================
 
-ReactDOM.render(
-  (<div>
-    <App />
-    <Game />
-    <TodoList />
-  </div>),
-  document.getElementById('root')
-);
+ReactDOM.render((
+  <BrowserRouter>
+    <Router />
+  </BrowserRouter>
+), document.getElementById('root'))
