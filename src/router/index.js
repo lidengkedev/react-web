@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
 import App from '../App'
 
-import Dashboard from '../view/Dashboard/Dashboard'
-import NotPage from '../view/404/NotPage'
-import Game from '../view/Game'
-import TodoList from '../view/TodoList'
+import Dashboard from '../views/Dashboard/Dashboard'
+import NotPage from '../views/404/NotPage'
+import Game from '../views/Game'
+import TodoList from '../views/TodoList'
+import TodoList2 from '../views/todo-list'
 import BlogList from '../views/blog/BlogList'
 import BlogDetail from '../views/blog/BlogDetail'
 
@@ -18,6 +19,7 @@ class Router extends Component {
       { path: '/', component: Dashboard },
       { path: '/game', component: Game },
       { path: '/todolist', component: TodoList },
+      { path: '/todo-list', component: TodoList2 },
       { path: '/blog', component: BlogList },
       { path: '/blog/detail', component: BlogDetail },
       { path: '/404', component: NotPage }

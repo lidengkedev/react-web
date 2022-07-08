@@ -9,6 +9,7 @@ class App extends Component {
         { path: '/', title: '首页' },
         { path: '/game', title: '游戏' },
         { path: '/todolist', title: 'Todo列表' },
+        { path: '/todo-list', title: 'Todo列表' },
         { path: '/blog', title: '博客' },
         { path: { pathname: '/404', search: '?name=homename', state: { mold: 'add' }, aa: 'ddd' }, title: '404' }
       ]
