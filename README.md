@@ -66,3 +66,35 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## 配置React配置文件
+
+使用如下命令生成两个文件夹 `config` 和 `scripts`，`config`文件夹放置的是项目配置文件，`scripts` 文件夹放置的是脚本执行文件。
+
+执行如下命令行之后，`package.json` 中的 `scripts` 脚本命令行也会该自动修改为 `scripts` 文件夹中的命令。
+
+==注意：执行如下命令后，需要重新安装一下项目依赖，因为执行如下命令后，会在 `package.json` 中添加若干依赖包，然后才能正常运行打包命令。==
+
+```bash
+$ yarn eject
+
+$ pnpm eject
+```
+### 修改默认打包输出的文件名
+
+找到 `config/path.js` 文件，修改文件 `appBuild: resolveApp('build')` 中的 `build` 改为 `dist`，或者其他名字。
+
+### 修改默认打包静态资源根路径
+
+在环境配置文件中添加 `PUBLIC_URL` 变量，并根据不同环境变量修改静态资源根路径。
+
+```bash
+ENV = 'development'
+PUBLIC_URL = '/'
+```
+
+```bash
+ENV = 'production'
+
+PUBLIC_URL = 'https://lidengkedev.github.io/react-web/'
+```
