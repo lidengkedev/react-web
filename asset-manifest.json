@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "https://lidengkedev.github.io/react-web/static/css/main.a0edd8f1.chunk.css",
+    "main.js": "https://lidengkedev.github.io/react-web/static/js/main.dd0de056.chunk.js",
+    "main.js.map": "https://lidengkedev.github.io/react-web/static/js/main.dd0de056.chunk.js.map",
+    "runtime-main.js": "https://lidengkedev.github.io/react-web/static/js/runtime-main.1f75d0f1.js",
+    "runtime-main.js.map": "https://lidengkedev.github.io/react-web/static/js/runtime-main.1f75d0f1.js.map",
+    "static/css/2.da393fb9.chunk.css": "https://lidengkedev.github.io/react-web/static/css/2.da393fb9.chunk.css",
+    "static/js/2.d27c0192.chunk.js": "https://lidengkedev.github.io/react-web/static/js/2.d27c0192.chunk.js",
+    "static/js/2.d27c0192.chunk.js.map": "https://lidengkedev.github.io/react-web/static/js/2.d27c0192.chunk.js.map",
+    "index.html": "https://lidengkedev.github.io/react-web/index.html",
+    "precache-manifest.8e7782cb023e0a917cea1e88bc067633.js": "https://lidengkedev.github.io/react-web/precache-manifest.8e7782cb023e0a917cea1e88bc067633.js",
+    "service-worker.js": "https://lidengkedev.github.io/react-web/service-worker.js",
+    "static/css/2.da393fb9.chunk.css.map": "https://lidengkedev.github.io/react-web/static/css/2.da393fb9.chunk.css.map",
+    "static/css/main.a0edd8f1.chunk.css.map": "https://lidengkedev.github.io/react-web/static/css/main.a0edd8f1.chunk.css.map",
+    "static/js/2.d27c0192.chunk.js.LICENSE.txt": "https://lidengkedev.github.io/react-web/static/js/2.d27c0192.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f75d0f1.js",
+    "static/css/2.da393fb9.chunk.css",
+    "static/js/2.d27c0192.chunk.js",
+    "static/css/main.a0edd8f1.chunk.css",
+    "static/js/main.dd0de056.chunk.js"
+  ]
+}
